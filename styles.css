@@ -1,0 +1,81 @@
+/* Basic reset and styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #FF6347, #FFD700, #32CD32, #8A2BE2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
+}
+
+.game-container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #333;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    color: black; /* Default text color for 'X' and 'O' */
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+}
+
+/* Custom styles for 'X' and 'O' text colors */
+.cell.x {
+    color: #FF6347; /* Red color for 'X' */
+}
+
+.cell.o {
+    color: #32CD32; /* Green color for 'O' */
+}
+
+.status {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
